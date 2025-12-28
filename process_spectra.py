@@ -62,6 +62,7 @@ def estimate_particle_radius(spectrum_data):
     # because larger particles exhibit different scattering/absorption efficiency.
     k = 12.5  # empirical constant (µm)
     c = 0.2   # offset (µm)
+    # Larger particles scatter more efficiently at 2.0 µm relative to 1.5 µm (Rostova et al.)
     radius = k * (abs_2_0 / abs_1_5) + c  # Rostova formula using 1.5 µm and 2.0 µm absorption ratio
     
     return radius
